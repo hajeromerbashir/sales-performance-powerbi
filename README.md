@@ -30,9 +30,9 @@ The project utilizes advanced DAX calculations to achieve dynamic time intellige
 
 *  [[Time Intelligence][(DAX/02_Time_Intelligence.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2302%20%20Time%20Intelligence%20%26%20Parameter%20Measures))]** - Dynamic CY and PY metrics using What-If parameters
   
-*   [YoY Growth]([DAX/03_YoY_Growth.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2303%20%20Year-Over-Year%20(YoY)%20Growth%20Measures))** - Year-over-Year percentage differences..
-*   [Top N Analysis]([DAX/05_Top_N_Analysis.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2305%20Top_N_Analysis))** - Dynamic filtering for Top 5 Subcategories.
-
+*   [YoY Growth]([DAX/03_YoY_Growth.md][(https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2303%20%20Year-Over-Year%20(YoY)%20Growth%20Measures))](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2303%20%20Year-Over-Year%20(YoY)%20Growth%20Measures)** - Year-over-Year percentage differences..
+*   [Top N Analysis]([DAX/05_Top_N_Analysis.md][(https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2305%20Top_N_Analysis))] ** - Dynamic filtering for Top 5 Subcategories.
+* [conditional formatting]([DAX/#04 Conditional_Formatting.md][(https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%234%20Conditional_Formatting)])
 👉 **[View the full DAX documentation here][DAX](https://github.com/hajeromerbashir/sales-performance-powerbi/tree/main/DAX)**
 
 ## 🛠️ Tools & Technologies
