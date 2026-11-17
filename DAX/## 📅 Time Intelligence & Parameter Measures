@@ -1,0 +1,35 @@
+# DAX Measures Documentation
+
+This document outlines the key DAX measures used to build the Sales Dashboard. The measures are grouped by their functionality.
+
+These measures utilize the What-If `Parameter[Select Year Value]` to dynamically calculate Current Year (CY) and Previous Year (PY) metrics.
+
+## Parameter = GENERATESERIES(2020, 2023, 1)
+
+## DAX:
+Current Year = 'Parameter'[Select Year Value]
+Previous Year = 'Parameter'[Select Year Value] - 1
+
+- CY Sales = 
+VAR Selected_Year = Parameter[Select Year Value]
+RETURN CALCULATE([Total Sales], YEAR(Orders[Order Date]) = Selected_Year)
+
+- PY Sales = 
+VAR SelectYear = Parameter[Select Year Value]
+RETURN CALCULATE([Total Sales], YEAR(Orders[Order Date]) = SelectYear - 1)
+
+- CY Profit = 
+VAR SelectYear = Parameter[Select Year Value]
+RETURN CALCULATE([Total Profit], YEAR(Orders[Order Date]) = SelectYear)
+
+- PY Profit = 
+VAR SelectYear = Parameter[Select Year Value]
+RETURN CALCULATE([Total Profit], YEAR(Orders[Order Date]) = SelectYear - 1)
+
+- CY Quantity = 
+VAR SelectYear = Parameter[Select Year Value]
+RETURN CALCULATE([Total Quantity], YEAR(Orders[Order Date]) = SelectYear)
+
+-PY Quantity = 
+VAR SelectYear = Parameter[Select Year Value]
+RETURN CALCULATE([Total Quantity], YEAR(Orders[Order Date]) = SelectYear - 1)
