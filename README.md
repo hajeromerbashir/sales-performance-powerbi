@@ -6,7 +6,7 @@ This project features an interactive Sales Dashboard built in Power BI. The purp
 *Note: Since a Power BI account is required to view interactive `.pbix` files, this repository contains the dataset, dashboard screenshots, data model, and the DAX code used to build the report.*
 
 ## 🖼️ Dashboard Preview
-(images/dashboard_preview.PNG)
+images/dashboard_preview.PNG
 
 ## 🎯 Key Requirements Met
 The dashboard was designed to address the following business requirements:
@@ -18,7 +18,7 @@ The dashboard was designed to address the following business requirements:
 
 ## 🗄️ Data Model
 The report utilizes a **Star Schema** design for optimal performance and accurate filtering.
-![Data Model](images/data_model.png)
+images/data_model.PNG
 
 *   **Fact Table:** `Orders` (contains transactional data like Sales, Profit, Quantity)
 *   **Dimension Tables:** `Customers`, `Location` (Postal Code), `Products`
@@ -31,7 +31,7 @@ The project utilizes advanced DAX calculations to achieve dynamic time-intellige
 *   Top N filtering logic (`Top Five by Profit`, `Top Five by Sales`).
 *   Dynamic titles and labels.
 
-👉 **[View the full DAX documentation here](DAX/DAX_Measures.md)**
+👉 **[View the full DAX documentation here]DAX**
 
 ## 🛠️ Tools & Technologies
 *   **Data:** Provided in the `dataset` folder (CSV format).
