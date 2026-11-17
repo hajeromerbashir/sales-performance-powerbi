@@ -6,3 +6,11 @@ dax:
 % YOY Profit Diff = DIVIDE([CY Profit] - [PY Profit], [PY Profit])
 
 % YOY Quantity Diff = DIVIDE([CY Quantity] - [PY Quantity], [PY Quantity])
+
+Scaled YoY for Visuals:
+This measure scales the YoY percentage by the maximum sales to ensure it plots correctly on a secondary axis or specific chart limits.
+
+% YOY Sales Diff - Scaled = 
+VAR MaxSales = MAXX(ALLSELECTED(Products[Sub-Category]), [CY Sales])
+RETURN [% YOY Sales Diff] * MaxSales
+
