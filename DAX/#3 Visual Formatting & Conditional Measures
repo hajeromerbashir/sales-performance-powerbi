@@ -1,0 +1,22 @@
+- Max Sales = MAXX(ALLSELECTED(Orders[Order Date].[Month]), [CY Sales])
+- Min Sales = MINX(ALLSELECTED(Orders[Order Date].[Month]), [CY Sales])
+
+- Min/Max Sales = 
+VAR CurrentSales = [CY Sales]
+VAR TotalSales = CALCULATE([CY Sales], ALLSELECTED(Orders[Order Date].[Month]))
+VAR MaxSales = MAX(TotalSales, [CY Sales])
+VAR MinSales = MIN(TotalSales, [CY Sales])
+RETURN
+    IF( CurrentSales = MaxSales || CurrentSales = MinSales, [CY Sales], BLANK() )
+
+- Avg CY Sales = AVERAGEX(ALLSELECTED(Products[Product Name]), [CY Sales])
+
+- Sales - Above Avg = 
+VAR CurrentSales = [CY Sales]
+VAR AvgSales = [Avg CY Sales]
+RETURN IF(CurrentSales >= AvgSales, CurrentSales, BLANK())
+
+- Sales - Below Avg = 
+VAR CurrentSales = [CY Sales]
+VAR AvgSales = [Avg CY Sales]
+RETURN IF(CurrentSales < AvgSales, CurrentSales, BLANK())
