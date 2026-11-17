@@ -1,0 +1,37 @@
+
+#### 5. `DAX/05_Top_N_Analysis.md`
+```markdown
+# Top N / Ranking Measures
+
+Used to dynamically identify and filter the Top 5 Subcategories by Sales and Profit.
+
+dax:
+Top Five by Profit = 
+VAR RankTable = 
+    ADDCOLUMNS(
+        ALLSELECTED(Products[Sub-Category]),
+        "@Profit", [CY Profit],
+        "@Rank", RANKX(ALLSELECTED(Products[Sub-Category]), [CY Profit], , DESC, DENSE)
+    )
+VAR Top5 = FILTER(RankTable, [@Rank] <= 5)
+RETURN
+    IF(
+        SELECTEDVALUE(Products[Sub-Category]) IN SELECTCOLUMNS(Top5, "Sub", [Sub-Category]),
+        [CY Profit],
+        BLANK()
+    )
+
+Top Five by Sales = 
+VAR RankTable = 
+    ADDCOLUMNS(
+        ALLSELECTED(Products[Sub-Category]),
+        "@Sales", [CY Sales],
+        "@Rank", RANKX(ALLSELECTED(Products[Sub-Category]), [CY Sales], , DESC, DENSE)
+    )
+VAR Top5 = FILTER(RankTable, [@Rank] <= 5)
+RETURN
+    IF(
+        SELECTEDVALUE(Products[Sub-Category]) IN SELECTCOLUMNS(Top5, "Sub", [Sub-Category]),
+        [CY Sales],
+        BLANK()
+    )
