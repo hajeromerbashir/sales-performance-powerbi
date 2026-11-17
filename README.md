@@ -6,7 +6,7 @@ This project features an interactive Sales Dashboard built in Power BI. The purp
 *Note: Since a Power BI account is required to view interactive `.pbix` files, this repository contains the dataset, dashboard screenshots, data model, and the DAX code used to build the report.*
 
 ## 🖼️ Dashboard Preview
-![Sales Dashboard Preview](images/dashboard_preview.png)
+(images/dashboard_preview.PNG)
 
 ## 🎯 Key Requirements Met
 The dashboard was designed to address the following business requirements:
