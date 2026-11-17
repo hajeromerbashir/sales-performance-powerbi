@@ -1,3 +1,13 @@
+# Conditional Formatting & Highlight Measures
+
+These measures return data only when specific conditions are met. They are used to highlight Highs, Lows, and Above/Below Average data points in the visualizations.
+
+** Average Sales
+dax:
+Avg CY Sales = AVERAGEX(ALLSELECTED(Products[Product Name]), [CY Sales])
+
+** Min / Max Identification
+
 - Max Sales = MAXX(ALLSELECTED(Orders[Order Date].[Month]), [CY Sales])
 - Min Sales = MINX(ALLSELECTED(Orders[Order Date].[Month]), [CY Sales])
 
@@ -9,14 +19,17 @@ VAR MinSales = MIN(TotalSales, [CY Sales])
 RETURN
     IF( CurrentSales = MaxSales || CurrentSales = MinSales, [CY Sales], BLANK() )
 
-- Avg CY Sales = AVERAGEX(ALLSELECTED(Products[Product Name]), [CY Sales])
+/* Note: 'Min/Max Profit' and 'Min/Max Quantity' use the same logic, 
+   just replacing [CY Sales] with the respective metric. */
 
+
+** Above / Below Average
 - Sales - Above Avg = 
 VAR CurrentSales = [CY Sales]
 VAR AvgSales = [Avg CY Sales]
 RETURN IF(CurrentSales >= AvgSales, CurrentSales, BLANK())
 
-- Sales - Below Avg = 
+- Sales - Below AvgS = 
 VAR CurrentSales = [CY Sales]
 VAR AvgSales = [Avg CY Sales]
 RETURN IF(CurrentSales < AvgSales, CurrentSales, BLANK())
