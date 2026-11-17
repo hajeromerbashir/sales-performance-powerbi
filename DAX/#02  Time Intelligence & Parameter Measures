@@ -7,6 +7,13 @@ These measures utilize the What-If `Parameter[Select Year Value]` to dynamically
 ## Parameter = GENERATESERIES(2020, 2023, 1)
 
 ## DAX:
+-- Base Measures:
+Total Sales = SUM(Orders[Sales])
+Total Profit = SUM(Orders[Profit])
+Total Quantity = SUM(Orders[Quantity])
+
+----------
+
 Current Year = 'Parameter'[Select Year Value]
 Previous Year = 'Parameter'[Select Year Value] - 1
 
