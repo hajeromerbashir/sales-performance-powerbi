@@ -18,7 +18,7 @@ The dashboard was designed to address the following business requirements:
 
 ## 🗄️ Data Model
 The report utilizes a **Star Schema** design for optimal performance and accurate filtering.
-images/data_model.PNG
+[images/data_model.PNG](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/images/data_model.PNG)
 
 *   **Fact Table:** `Orders` (contains transactional data like Sales, Profit, Quantity)
 *   **Dimension Tables:** `Customers`, `Location` (Postal Code), `Products`
