@@ -1,0 +1,28 @@
+
+Unlike Measures, these calculations are evaluated row-by-row and are stored directly in the `Orders` table. They were created in the Data View to support time-intelligence visuals (Monthly and Weekly trends).
+
+### WeekNum
+Used to plot the "Weekly Sales" and "Weekly Profit" line charts.
+dax:
+WeekNum = WEEKNUM(Orders[Order Date].[Date], 1)
+
+### Month Num
+Used for sorting the months chronologically in the visuals (so October doesn't appear before January).
+dax:
+Month Num = MONTH(Orders[Order Date].[Date])
+
+### Month name
+Used for the axis labels in the "Total Sales by Month" charts.
+dax:
+Month name = FORMAT(Orders[Order Date].[Date], "mmm")
+
+### MonthLabel
+A custom label used to isolate specific months (January and December).
+dax:
+MonthLabel = 
+IF( [Month Num] = 1, "Jan", 
+    IF( [Month Num] = 12, "Dec", 
+        " " 
+    )
+)
+
