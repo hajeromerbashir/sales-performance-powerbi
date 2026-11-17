@@ -1,0 +1,3 @@
+% YOY Sales Diff = DIVIDE([CY Sales] - [PY Sales], [PY Sales]) 
+% YOY Profit Diff = DIVIDE([CY Profit] - [PY Profit], [PY Profit])
+% YOY Quantity Diff = DIVIDE([CY Quantity] - [PY Quantity], [PY Quantity])
