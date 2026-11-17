@@ -29,7 +29,17 @@ VAR CurrentSales = [CY Sales]
 VAR AvgSales = [Avg CY Sales]
 RETURN IF(CurrentSales >= AvgSales, CurrentSales, BLANK())
 
-- Sales - Below AvgS = 
+- Sales - Below Avg = 
 VAR CurrentSales = [CY Sales]
 VAR AvgSales = [Avg CY Sales]
 RETURN IF(CurrentSales < AvgSales, CurrentSales, BLANK())
+
+
+** Positive / Negative YoY
+Positive YOY Profit = 
+VAR Diff = [CY profit] - [PY profit]
+RETURN IF( Diff > 0, Diff, BLANK() )
+
+** Negative YOY Sales = 
+VAR Diff = [CY Sales] - [PY Sales]
+RETURN IF( Diff < 0, Diff, BLANK() )
