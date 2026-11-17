@@ -26,7 +26,7 @@ The report utilizes a **Star Schema** design for optimal performance and accurat
 
 ##  (DAX)
 The project utilizes advanced DAX calculations to achieve dynamic time intelligence and user interactivity. The code has been categorized into specific markdown files for easy review:
-**[Calculated Columns] (https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2301%20Calculated%20Columns%20(Orders%20Table)** - Custom columns for time-based grouping.
+**[Calculated Columns](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2301%20Calculated%20Columns%20(Orders%20Table)** - Custom columns for time-based grouping.
 *  [[Time Intelligence](DAX/02_Time_Intelligence.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2302%20%20Time%20Intelligence%20%26%20Parameter%20Measures))** - Dynamic CY and PY metrics using What-If parameters
 *   [YoY Growth]([DAX/03_YoY_Growth.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2303%20%20Year-Over-Year%20(YoY)%20Growth%20Measures))** - Year-over-Year percentage differences..
 *   [Top N Analysis]([DAX/05_Top_N_Analysis.md](https://github.com/hajeromerbashir/sales-performance-powerbi/blob/main/DAX/%2305%20Top_N_Analysis))** - Dynamic filtering for Top 5 Subcategories.
